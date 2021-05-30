@@ -140,11 +140,21 @@ TRANSLATIONS_PATTERN = '{path}.{lang}.{ext}'
 
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
-        ("https://jandroegehoff.de", "Homepage"),
-        ("/archive.html", "Posts"),
-        ("/rss.xml", "RSS"),
-    ),
+        ('/index.html', 'Home', 'fas fa-home'),
+        ('/archive.html', 'Archives', 'fa fa-folder-open'),
+        ('/categories/index.html', 'Tags', 'fa fa-tags'),
+        ('/rss.xml', 'RSS', 'fa fa-rss'),
+        ('https://jandroegehoff.de', 'Homepage', ''),
+    )
 }
+
+#NAVIGATION_LINKS = {
+#    DEFAULT_LANG: (
+#        ("https://jandroegehoff.de", "Homepage"),
+#        ("/archive.html", "Posts"),
+#        ("/rss.xml", "RSS"),
+#    ),
+#}
 
 # Alternative navigation links. Works the same way NAVIGATION_LINKS does,
 # although themes may not always support them. (translatable)
@@ -155,7 +165,7 @@ NAVIGATION_ALT_LINKS = {
 
 # Name of the theme to use.
 #THEME = "bootblog4"
-THEME = "lanyon"
+THEME = "gruberwine"
 
 # A theme color. In default themes, it might be displayed by some browsers as
 # the browser UI color (eg. Chrome on Android). Other themes might also use it
