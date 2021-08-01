@@ -55,10 +55,11 @@ we iterate over all files in the current directory and check if they are executa
 On linux we can simply check the executable bit but on Windows there isn't such a straight forward way so we just check if it ends with .EXE
 
 ```c
+#define EXE ".exe"
+
 int isExe(const char* path)
 {
 #ifdef _WIN32
-    // using GetBinaryTypeA would be a saner solution
     size_t pathlen = strlen(path);
 
     return strncmp(path + (pathlen - strlen(EXE)), EXE, strlen(EXE)+1) == 0;
@@ -86,8 +87,7 @@ void MainWindow::addButton(const QString name)
 }
 ```
 
-that button hooks a lambda function to its clicked event which causes it to replace our current process with a new one
-
+that button gets a lambda function hooked up to its clicked event giving us access to the name without having to store it ourselves
 
 ```cpp
 void MainWindow::replaceProcess(QString name)

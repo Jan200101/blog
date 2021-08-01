@@ -1,5 +1,5 @@
 <!--
-.. title: Sameboy thumbnailer
+.. title: GameBoy Thumbnails on Linux
 .. slug: sameboy-thumbnailer
 .. date: 2021-03-01 15:08:55 UTC+02:00
 .. tags: 
@@ -9,11 +9,11 @@
 .. type: text
 -->
 
-# MacOS gets the pretty features
+# Where I started
 
 My introduction to SameBoy came from stacksmashing's ["How to reverse engineer & patch a Game Boy ROM"](https://youtu.be/dQLp5i8oS3Y) video.
 
-I'm not big on reverse engineering but I do enjoy a good GameBoy game when I get one.
+I'm not big on reverse engineering but I do enjoy a good GameBoy game when I see one.
 
 and there it was
 
@@ -25,10 +25,12 @@ but these kinds of features are almost never present on Linux be it because no o
 
 Despite that I was interested in it and started looking through the code
 
-# thumbnailing the gameboy
+# pretty images for pretty games
 
-the MacOS code simple stored a bitmap and so did the testing code
-so I went from there and made a simple example that output a bitmap from any gameboy rom given
+the code was simple
+it stored the framebuffer output in a bitmap image and composed that under the image for the cartridge case.
+
+Seems simple
 
 ([source code](https://github.com/Jan200101/SameBoy/blob/bmp-thumbnailer/Thumbnailer/main.c))
 ```c
@@ -66,12 +68,13 @@ a simple conversion to PNG was completed and the resulting binary outputted pngs
 
 ![](/images/sameboy/103683381-6b58e080-4f8a-11eb-97ec-a2859dc807be.png)
 
-but it was a bit bare and having to specify the bootrom path wasn't very user friendly so I took suggestions from max-m and included all I need in the binary itself
+I was happy with this but it was a bit bare and having to specify the bootrom path wasn't very user friendly so I took suggestions from max-m and embedded everything needed in the binary itself
 
-but for the overlaying gameboy cart to look properly I needed to do some resizing
+but the image does need to be resized if a differnt resolution was desired
 
 so I implemented a basic scaling function with things like passable sample size
 
+([source code](https://github.com/Jan200101/SameBoy/blob/thumbnailer/Thumbnailer/main.c#L70))
 ```c 
 static void scale_image(const uint32_t* input, const signed input_width, const signed input_height,
                         uint32_t* output, const double multiplier, const signed samples)
