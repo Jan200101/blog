@@ -1,4 +1,4 @@
-baseURL = "https://blog.jandroegehoff.de"
+baseURL = "https://blog.jandroegehoff.de/"
 
 title = "Blog"
 paginate = 5
