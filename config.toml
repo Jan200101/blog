@@ -1,6 +1,6 @@
 baseURL = "https://blog.jandroegehoff.de/"
 
-title = "Blog"
+title = "Jan's Blog"
 paginate = 5
 theme = "PaperMod"
 enableInlineShortcodes = true
