@@ -101,7 +101,7 @@ To help drive this change patches to [GNOME](https://gitlab.gnome.org/GNOME/gnom
 <sup>If there is any system you would like to see supported, feel free to reach out to me on Discord: **jan200101**</sup>
 
 Fedora users can make use of this [COPR Repository](https://copr.fedorainfracloud.org/coprs/sentry/switcheroo-control_discrete/) to test these changes via the `switcherooctl` command  
-The [Bazzite](https://bazzite.gg/) distrobution graciously ships these changes in their stable repository so users of it can already test these changes.
+The [Bazzite](https://bazzite.gg/) distrobution graciously ships these changes in their stable repository so users of it can already test them.
 
 I want to thank hadess and jadahl for trying their best to keep switcheroo-control going and a dozen other people for enduring my inane rants on the subject.  
 I hope these changes will improve the Desktop Linux experience going forward, making it more viable to more people to daily drive.
