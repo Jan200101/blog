@@ -1,8 +1,8 @@
 ---
 author: "Jan Drögehoff"
 title: "The state of multi-GPU support in Linux distros"
+summary: "and how we ended up here"
 date: "2024-02-16"
-description: "and its problems"
 tags: ["GPU", "GNOME", "KDE"]
 ---
 
@@ -76,7 +76,7 @@ I am only aware of the Tegra4Linux project as a Linux System that makes use of a
 its very much possible to detect if a device using the i915 uses but it involves a ton of poking the device with raw commands.  
 This isn't exactly something I want to do, as its an incredibly opaque process and could break easily.
 
-So I went looking for an alterantive and found one: the PCI device ID  
+So I went looking for an alternative and found one: the PCI device ID  
 In short: integrated Intel GPUs always tend to be `0000:00:02.0`
 
 I've asked around on a few Discords asking people for their lspci output and of roughly 20 datasets all of them matched this pattern, so this is what I've used.  

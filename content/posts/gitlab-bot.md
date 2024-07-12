@@ -1,6 +1,7 @@
 ---
 author: "Jan Drögehoff"
 title: "Automating GitLab labeling"
+summary: "simplifying ticket management"
 date: "2022-03-29"
 tags: ["Python", "GitLab", "Bot"]
 ---

@@ -1,9 +1,9 @@
 ---
 author: "Jan Drögehoff"
 title: "Wii Homebrew Browser revival"
+summary: "taking old and making it new again"
 date: "2021-03-18"
 tags: ["C", "Wii", "devkitPro"]
-description: "restoring the Homebrew Browser to its glory"
 ---
 
 [hbb source code](https://github.com/Jan200101/hbb)

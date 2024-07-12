@@ -1,9 +1,9 @@
 ---
 author: "Jan Drögehoff"
 title: "OFLauncher history"
-date: "2022-09-29"
+summary: "Open Source Launcher for the Open Fortress mod"
+date: "2022-02-10"
 tags: ["C", "C++", "Qt"]
-description: "Open Source Launcher for the Open Fortress mod"
 ---
 
 # 2020
